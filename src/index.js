@@ -5,6 +5,7 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'react-redux';
 import logger from 'redux-logger';
+import { applyMiddleware, createStore, combineReducers } from 'redux';
 
 //creating reducer for feeling so can store feeling
 const feelingReducer = (state = [], action) => {
@@ -14,6 +15,7 @@ const feelingReducer = (state = [], action) => {
     return state;
 }
 
+//create store to hold reducers
 const storeInstance = createStore(
     combineReducers({
         feelingReducer

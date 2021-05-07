@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
+import {useHistory} from 'react-router-dom'
 
 function Feeling() {
 
@@ -8,9 +9,9 @@ function Feeling() {
     //set useHistory to be variable history
     const history = useHistory();
     //declaring feeling state
-    const [feeling, setFeeling] = useState('')
+    const [feeling, setFeeling] = useState(0)
     //if any input for feeling, button will be enabled. If no input, button disabled
-    const isEnabled = feeling.length > 0
+    const isEnabled = feeling > 0
     //on submit of next button - these events will happen
     const handleSubmit = event => {
         event.preventDefault();
@@ -28,7 +29,7 @@ function Feeling() {
         <form onSubmit={handleSubmit}>
             <h1>How are you feeling today?</h1>
             <p>Feeling?</p>
-            <input />
+            <input type="number" min="0" max="5" value={feeling} onChange={(event) => setFeeling(event.target.value)}/>
             <button disabled={!isEnabled}>NEXT</button>
         </form>
 
