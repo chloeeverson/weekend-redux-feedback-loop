@@ -23,11 +23,20 @@ const understandingReducer = (state = [], action) => {
     return state;
 }
 
+//creating reducer for support so can store support
+const supportReducer = (state = [], action) => {
+    if (action.type === 'ADD_SUPPORT'){
+        return action.payload;
+    }
+    return state;
+}
+
 //create store to hold reducers
 const storeInstance = createStore(
     combineReducers({
         feelingReducer,
-        understandingReducer
+        understandingReducer,
+        supportReducer
     }),
     applyMiddleware(
         logger

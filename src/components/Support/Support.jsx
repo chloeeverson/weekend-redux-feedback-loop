@@ -11,7 +11,7 @@ function Support() {
     //declaring support state
     const [support, setSupport] = useState(0)
     //if any input for support, button will be enabled. If no input, button disabled
-    const isEnabled = understanding > 0
+    const isEnabled = support > 0
     //on submit of next button - these events will happen
     const handleSubmit = event => {
         event.preventDefault();
