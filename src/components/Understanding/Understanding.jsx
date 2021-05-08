@@ -27,7 +27,7 @@ function Understanding() {
     }
     return (
         <form onSubmit={handleSubmit}>
-            <h1>How well are you understanding the content??</h1>
+            <h1>How well are you understanding the content?</h1>
             <p>Understanding?</p>
             <input type="number" min="0" max="5" value={understanding} onChange={(event) => setUnderstanding(event.target.value)}/>
             <button disabled={!isEnabled}>NEXT</button>

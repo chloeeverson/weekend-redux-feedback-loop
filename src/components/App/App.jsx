@@ -8,7 +8,7 @@ import {HashRouter as Router, Route} from 'react-router-dom';
 //importing components 
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
-// import Support from '../Support/Support';
+import Support from '../Support/Support';
 // import Comments from '../Comments/Comments';
 import './App.css';
 
@@ -28,10 +28,10 @@ function App() {
         <Route path="/understanding" exact>
           <Understanding />
         </Route>
-        {/* <Route path="/support" exact>
+        <Route path="/support" exact>
           <Support />
         </Route>
-        <Route path="/comments" exact>
+        {/* <Route path="/comments" exact>
           <Comments />
         </Route> */}
       </Router>
