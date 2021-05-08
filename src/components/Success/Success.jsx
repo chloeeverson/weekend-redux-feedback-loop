@@ -7,8 +7,6 @@ function Success() {
 
     function handleSubmit (){
         console.log('clicked');
-        // dispatch({type: 'RESET_FEELING'});
-        // dispatch({type: 'RESET_UNDERSTANDING'});
         history.push('/');
     }
     return(

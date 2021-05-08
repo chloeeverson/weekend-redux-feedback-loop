@@ -8,7 +8,7 @@ import logger from 'redux-logger';
 import { applyMiddleware, createStore, combineReducers } from 'redux';
 
 //creating reducer for feeling so can store feeling
-const feelingReducer = (state = [], action) => {
+const feelingReducer = (state = '', action) => {
     if (action.type === 'ADD_FEELING'){
         return action.payload;
     }
@@ -16,7 +16,7 @@ const feelingReducer = (state = [], action) => {
 }
 
 //creating reducer for understanding so can store understanding
-const understandingReducer = (state = [], action) => {
+const understandingReducer = (state = '', action) => {
     if (action.type === 'ADD_UNDERSTANDING'){
         return action.payload;
     }
@@ -24,7 +24,7 @@ const understandingReducer = (state = [], action) => {
 }
 
 //creating reducer for support so can store support
-const supportReducer = (state = [], action) => {
+const supportReducer = (state = '', action) => {
     if (action.type === 'ADD_SUPPORT'){
         return action.payload;
     }
@@ -32,7 +32,7 @@ const supportReducer = (state = [], action) => {
 }
 
 //creating reducer for comments so can store comments
-const commentsReducer = (state = [], action) => {
+const commentsReducer = (state = '', action) => {
     if (action.type === 'ADD_COMMENTS'){
         return action.payload;
     }

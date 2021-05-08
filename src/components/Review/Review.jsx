@@ -14,16 +14,16 @@ function Review (){
     const handleSubmit = () => {
         console.log('click');
         const feedback = {
-          feeling: feelingFeedback,
-          understanding: understandingFeedback,
-          support: supportFeedback,
-          comments: commentsFeedback
+          feeling: feelingFeedback.feeling,
+          understanding: understandingFeedback.understanding,
+          support: supportFeedback.support,
+          comments: commentsFeedback.comments
           
         }
         console.log(feedback);
         axios({
           method: 'POST',
-          url: '/api/feedback', 
+          url: '/feedback', 
           data: feedback
         })
         .then(response =>  {
@@ -33,8 +33,6 @@ function Review (){
           console.log('Unable to add feedback', error);
           alert('Unable to add feedback');
         })
-        // dispatch({type: 'RESET_FEELING'});
-        // dispatch({type: 'RESET_UNDERSTANDING'});
         history.push('/success');
       }
     
@@ -42,13 +40,14 @@ function Review (){
         <>
             <h1>Review Your Feedback</h1>
             <p>
-                {feelingFeedback}
+               
+                {feelingFeedback.feeling}
                 <br />
-                {understandingFeedback}
+                {understandingFeedback.understanding}
                 <br />
-                {supportFeedback}
+                {supportFeedback.support}
                 <br />
-                {commentsFeedback}
+                {commentsFeedback.comments}
                 <br />
             </p>
             <button onClick={handleSubmit}>Submit</button>
