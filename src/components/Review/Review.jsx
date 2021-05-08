@@ -13,25 +13,25 @@ function Review (){
 
     const handleSubmit = () => {
         console.log('click');
-        const summary = {
+        const feedback = {
           feeling: feelingFeedback,
           understanding: understandingFeedback,
           support: supportFeedback,
           comments: commentsFeedback
           
         }
-        console.log(summary);
+        console.log(feedback);
         axios({
           method: 'POST',
-          url: '/api/summary', 
-          data: summary
+          url: '/api/feedback', 
+          data: feedback
         })
         .then(response =>  {
-          console.log('added summary to the server', response);
+          console.log('added feedback to the server', response);
         })
         .catch(error => {
-          console.log('Unable to add summary', error);
-          alert('Unable to add summary');
+          console.log('Unable to add feedback', error);
+          alert('Unable to add feedback');
         })
         // dispatch({type: 'RESET_FEELING'});
         // dispatch({type: 'RESET_UNDERSTANDING'});
