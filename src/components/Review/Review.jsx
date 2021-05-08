@@ -1,7 +1,10 @@
 import {useSelector} from 'react-redux';
+import axios from 'axios';
+import {useHistory} from 'react-router-dom';
 
 function Review (){
-
+    //create variable for history function
+    const history = useHistory();
     //access items in store - set variables to stored values
     const feelingFeedback = useSelector(store => store.feelingReducer);
     const understandingFeedback = useSelector(store => store.understandingReducer);
