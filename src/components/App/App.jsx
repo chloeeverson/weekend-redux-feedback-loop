@@ -9,7 +9,7 @@ import {HashRouter as Router, Route} from 'react-router-dom';
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
-// import Comments from '../Comments/Comments';
+import Comments from '../Comments/Comments';
 import './App.css';
 
 function App() {
@@ -31,9 +31,9 @@ function App() {
         <Route path="/support" exact>
           <Support />
         </Route>
-        {/* <Route path="/comments" exact>
+        <Route path="/comments" exact>
           <Comments />
-        </Route> */}
+        </Route>
       </Router>
     </div>
   );
