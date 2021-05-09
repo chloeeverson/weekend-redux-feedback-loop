@@ -41,14 +41,14 @@ function Review (){
             <h1>Review Your Feedback</h1>
             <p>
                
-                {feelingFeedback.feeling}
-                <br />
-                {understandingFeedback.understanding}
-                <br />
-                {supportFeedback.support}
-                <br />
-                {commentsFeedback.comments}
-                <br />
+                Feeling: {feelingFeedback.feeling}
+                <br /><br />
+                Understanding: {understandingFeedback.understanding}
+                <br /><br />
+                Support: {supportFeedback.support}
+                <br /><br />
+                Comments: {commentsFeedback.comments}
+                <br /><br />
             </p>
             <button onClick={handleSubmit}>Submit</button>
         </>
